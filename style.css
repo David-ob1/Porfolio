@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color:#081b29 ;
+    /* background-color:#081b29 ; */
     color: #ededed;
 }
 
@@ -53,6 +53,9 @@ body{
     display: flex;
     align-items: center;
     padding: 0 10%;
+    background: url("home.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .home-content{
@@ -107,7 +110,7 @@ height: 50px;
 }
 
 .btn-box a:hover{
-    color: #00abf0;
+    color: #00abf0 ;
 }
 
 .btn-box a:nth-child(2){
@@ -139,4 +142,61 @@ height: 50px;
 .btn-box a:hover::before{
     width: 100%;
     
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover{
+    color: #081b29;
+} 
+
+.home-sci a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background:  #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid red;
 }

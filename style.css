@@ -117,7 +117,7 @@ body{
     height: 100%;
     background-color: #081b29;
     animation: showRight 1s ease forwards;
-    animation-delay:1.2s;
+    animation-delay:1.2;
 
 }
 
@@ -291,11 +291,29 @@ body{
     background: transparent;
     /* border: 2px solid red; */
     transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay:4s;
+    pointer-events: none;
 }
 
 .home-imgHover:hover {
     background-color: #081b29;
     opacity: .8;
+}
+
+
+.home-imgHover::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay:3s;
+    z-index: 100;
+
 }
 
 @keyframes showRight {
@@ -304,4 +322,10 @@ body{
     
     }
     
+}
+
+@keyframes manipActiveHover {
+    100%{
+        pointer-events: auto
+    }
 }
